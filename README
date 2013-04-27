@@ -1,0 +1,6 @@
+mkvirtualenv sms
+pip install -r requirements.txt
+
+remember to replace the references to bjl7 in sms.cgi
+
+get twilio to point at that for its SMS request URL

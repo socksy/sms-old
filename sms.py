@@ -1,20 +1,22 @@
+import zmq
 from flask import Flask, request, redirect
 import twilio.twiml
 import re
  
 app = Flask(__name__)
+address = "tcp://localhost:56890"
   
 @app.route("/", methods=['GET', 'POST'])
 def hello_monkey():
     #print request.values
     text = request.values.get('Body',None)
     if text:
-        print text
-        if re.search('mov', text, flags=re.IGNORECASE):
-            print "mooooooove along!"
+        context = zmq.Context()
+        socket = context.socket(zmq.PAIR)
+        socket.connect(address)
+        socket.send(text)
     resp = twilio.twiml.Response()
     #resp.sms("Hello, Mobile Monkey")
-    print "test"
     return str(resp)
                 
 if __name__ == "__main__":
