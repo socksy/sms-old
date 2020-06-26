@@ -5,7 +5,7 @@ Markdoc==0.6.6
 Markdown==2.2.1
 Pygments==1.5
 WebOb==1.2.3
-Werkzeug==0.8.3
+Werkzeug==0.15.3
 argparse==1.2.1
 httplib2==0.8
 pyzmq==13.0.2
