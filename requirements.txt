@@ -3,7 +3,7 @@ Flask==0.9
 Jinja2==2.6
 Markdoc==0.6.6
 Markdown==2.2.1
-Pygments==1.5
+Pygments==2.7.4
 WebOb==1.2.3
 Werkzeug==0.8.3
 argparse==1.2.1
